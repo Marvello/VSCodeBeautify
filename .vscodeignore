@@ -1,6 +1,17 @@
 test
+node_modules
 .git*
+.github
+.claude
 .jsbeautifyrc
 .jshintrc
+.eslintrc.json
 .travis.yml
 .vscode
+appveyor.yml
+jsconfig.json
+icon.svg
+CLAUDE.md
+extension.js
+options.js
+**/*.map

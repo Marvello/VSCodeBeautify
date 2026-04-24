@@ -2,7 +2,7 @@
   "name": "beautify",
   "displayName": "Beautify",
   "description": "Beautify code in place for VS Code",
-  "version": "1.4.11",
+  "version": "1.5.2",
   "publisher": "HookyQR",
   "engines": {
     "vscode": "^1.32.0"
@@ -30,7 +30,7 @@
     "theme": "light"
   },
   "license": "MIT",
-  "main": "./extension",
+  "main": "./dist/extension.js",
   "contributes": {
     "languages": [
       {
@@ -228,6 +228,7 @@
   "devDependencies": {
     "@types/mocha": "^2.2.42",
     "@types/node": "^8.10.36",
+    "esbuild": "^0.28.0",
     "eslint": "^8.57.1",
     "expect.js": "^0.3.1",
     "mocha": "^5.2.0",
@@ -235,6 +236,7 @@
   },
   "scripts": {
     "postinstall": "node ./node_modules/vscode/bin/install",
+    "build": "esbuild extension.js --bundle --outfile=dist/extension.js --format=cjs --platform=node --external:vscode --minify",
     "test": "node ./node_modules/vscode/bin/test",
     "lint": "eslint extension.js options.js test/"
   },
