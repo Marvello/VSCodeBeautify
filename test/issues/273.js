@@ -6,7 +6,7 @@ module.exports = {
     space_before_conditional: false,
     space_in_paren: true,
     indent_size: 2,
-    indent_char: " ",
+    indent_char: ' ',
     space_after_anon_function: true,
     keep_function_indentation: true
   },

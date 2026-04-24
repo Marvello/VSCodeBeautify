@@ -117,7 +117,7 @@ function set_file_editorconfig_opts(file, config) {
         config.eol = '\r\n';
       }
     }
-  } catch (e) {}
+  } catch (e) {} // eslint-disable-line no-empty
 }
 
 const getWorkspaceRoot = doc => {

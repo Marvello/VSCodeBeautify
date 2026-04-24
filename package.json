@@ -5,7 +5,7 @@
   "version": "1.4.11",
   "publisher": "HookyQR",
   "engines": {
-    "vscode": "^1.22.0"
+    "vscode": "^1.32.0"
   },
   "categories": [
     "Other",
@@ -13,7 +13,16 @@
     "Formatters"
   ],
   "activationEvents": [
-    "*"
+    "onCommand:HookyQR.beautify",
+    "onCommand:HookyQR.beautifyFile",
+    "onLanguage:javascript",
+    "onLanguage:json",
+    "onLanguage:jsonc",
+    "onLanguage:css",
+    "onLanguage:less",
+    "onLanguage:scss",
+    "onLanguage:html",
+    "onLanguage:htm"
   ],
   "icon": "icon.png",
   "galleryBanner": {
@@ -74,11 +83,13 @@
             "null"
           ],
           "default": null,
-          "description": "A path to a file, or an object containing the configuration options for js-beautify. If the .jsbeautifyrc file exists in project root, it overrides this configuration."
+          "description": "A path to a file, or an object containing the configuration options for js-beautify. If the .jsbeautifyrc file exists in project root, it overrides this configuration.",
+          "scope": "resource"
         },
         "beautify.language": {
           "type": "object",
           "description": "Link file types to the beautifier type",
+          "scope": "resource",
           "default": {
             "js": {
               "type": [
@@ -210,21 +221,22 @@
     }
   },
   "dependencies": {
-    "editorconfig": "0.15.0",
-    "js-beautify": "^1.9.0",
+    "editorconfig": "^0.15.0",
+    "js-beautify": "^1.15.0",
     "minimatch": "^3.0.4"
   },
   "devDependencies": {
     "@types/mocha": "^2.2.42",
     "@types/node": "^8.10.36",
+    "eslint": "^8.57.1",
     "expect.js": "^0.3.1",
     "mocha": "^5.2.0",
-    "typescript": "^2.6.1",
     "vscode": "~1.1.18"
   },
   "scripts": {
     "postinstall": "node ./node_modules/vscode/bin/install",
-    "test": "node ./node_modules/vscode/bin/test"
+    "test": "node ./node_modules/vscode/bin/test",
+    "lint": "eslint extension.js options.js test/"
   },
   "repository": {
     "type": "git",
