@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## What This Is
 
-VS Code extension wrapping [js-beautify](https://github.com/beautify-web/js-beautify) to format JS, CSS, and HTML files in-editor. Published as "Beautify" (`HookyQR.beautify`) on the VS Code marketplace.
+VS Code extension wrapping [js-beautify](https://github.com/beautify-web/js-beautify) to format JS, CSS, and HTML files in-editor. Fork of [HookyQR/VSCodeBeautify](https://github.com/HookyQR/VSCodeBeautify), published as `Marvello.beautify`.
 
 ## Commands
 
@@ -19,7 +19,7 @@ Tests require VS Code and run inside an extension host — they cannot run headl
 
 Two files carry all logic:
 
-- **`extension.js`** — Extension entry point. Registers two commands (`HookyQR.beautify` for selection, `HookyQR.beautifyFile` for full file). The `Formatters` class builds VS Code document formatting providers from `beautify.language` config, mapping language types/extensions/filenames to js-beautify's `js`, `css`, or `html` formatters. Re-registers providers on config change and file open.
+- **`extension.js`** — Extension entry point. Registers two commands (`Marvello.beautify` for selection, `Marvello.beautifyFile` for full file). The `Formatters` class builds VS Code document formatting providers from `beautify.language` config, mapping language types/extensions/filenames to js-beautify's `js`, `css`, or `html` formatters. Re-registers providers on config change and file open.
 
 - **`options.js`** — Config resolution with a specific priority chain: VS Code editor settings → EditorConfig (`.editorconfig`) → `.jsbeautifyrc` (searched recursively from file dir to workspace root, then parent dirs, then `beautify.config` setting, then `~/.jsbeautifyrc`). Exports a single function `(doc, type, formattingOptions) → Promise<config>`. Comments in `.jsbeautifyrc` are stripped before JSON parse.
 

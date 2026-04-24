@@ -1,10 +1,12 @@
 # js-beautify for VS Code
 
+> This is a maintained fork of [HookyQR/VSCodeBeautify](https://github.com/HookyQR/VSCodeBeautify), which is no longer actively maintained.
+
 Beautify `javascript`, `JSON`, `CSS`, `Sass`, and `HTML` in Visual Studio Code.
 
 VS Code uses js-beautify internally, but it lacks the ability to modify the style you wish to use. This extension enables running [js-beautify](http://jsbeautifier.org/) in VS Code, _AND_ honouring any `.jsbeautifyrc` file in the open file's path tree to load *your* code styling. Run with  **F1** `Beautify` (to beautify a selection) or **F1** `Beautify file`.
 
-For help on the settings in the `.jsbeautifyrc` see [Settings.md](https://github.com/HookyQR/VSCodeBeautify/blob/master/Settings.md)
+For help on the settings in the `.jsbeautifyrc` see [Settings.md](https://github.com/Marvello/VSCodeBeautify/blob/master/Settings.md)
 
 ## How we determine what settings to use
 
@@ -111,11 +113,11 @@ Use the following to embed a beautify shortcut in keybindings.json. Replace with
 ```javascript
 {
   "key": "cmd+b",
-  "command": "HookyQR.beautify",
+  "command": "Marvello.beautify",
   "when": "editorFocus"
 }
 ```
 
 ## Contributing
 
-For information on contributing see [Contributing.md](https://github.com/HookyQR/VSCodeBeautify/blob/master/.github/CONTRIBUTING.md)
+For information on contributing see [Contributing.md](https://github.com/Marvello/VSCodeBeautify/blob/master/.github/CONTRIBUTING.md)

@@ -232,8 +232,8 @@ const formatActiveDocument = ranged => {
 //register on activation
 exports.activate = (context) => {
   let sub = context.subscriptions;
-  sub.push(vscode.commands.registerCommand('HookyQR.beautify', formatActiveDocument.bind(0, true)));
-  sub.push(vscode.commands.registerCommand('HookyQR.beautifyFile', formatActiveDocument.bind(0, false)));
+  sub.push(vscode.commands.registerCommand('Marvello.beautify', formatActiveDocument.bind(0, true)));
+  sub.push(vscode.commands.registerCommand('Marvello.beautifyFile', formatActiveDocument.bind(0, false)));
   sub.push(vscode.workspace.onDidChangeConfiguration(formatters.configure.bind(formatters)));
   sub.push(vscode.workspace.onDidOpenTextDocument(formatters.onFileOpen.bind(formatters)));
 };

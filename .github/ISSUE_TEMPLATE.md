@@ -23,7 +23,7 @@ VS Code:
 }
 ```
 ## Action performed
-Format javascript file with `HookyQR.beautifyFile` command
+Format javascript file with `Marvello.beautifyFile` command
 _provide example code_
 
 ## Expected results

@@ -3,7 +3,7 @@
   "displayName": "Beautify",
   "description": "Beautify code in place for VS Code",
   "version": "1.5.2",
-  "publisher": "HookyQR",
+  "publisher": "Marvello",
   "engines": {
     "vscode": "^1.32.0"
   },
@@ -13,8 +13,8 @@
     "Formatters"
   ],
   "activationEvents": [
-    "onCommand:HookyQR.beautify",
-    "onCommand:HookyQR.beautifyFile",
+    "onCommand:Marvello.beautify",
+    "onCommand:Marvello.beautifyFile",
     "onLanguage:javascript",
     "onLanguage:json",
     "onLanguage:jsonc",
@@ -52,11 +52,11 @@
     ],
     "commands": [
       {
-        "command": "HookyQR.beautify",
+        "command": "Marvello.beautify",
         "title": "Beautify selection"
       },
       {
-        "command": "HookyQR.beautifyFile",
+        "command": "Marvello.beautifyFile",
         "title": "Beautify file"
       }
     ],
@@ -242,9 +242,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/HookyQR/VSCodeBeautify"
+    "url": "https://github.com/Marvello/VSCodeBeautify"
   },
   "bugs": {
-    "url": "https://github.com/HookyQR/VSCodeBeautify/issues"
+    "url": "https://github.com/Marvello/VSCodeBeautify/issues"
   }
 }
