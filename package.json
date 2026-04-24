@@ -1,6 +1,6 @@
 {
-  "name": "beautify",
-  "displayName": "Beautify",
+  "name": "js-beautify-wrapper",
+  "displayName": "Js Beautify Wrapper",
   "description": "Beautify code in place for VS Code",
   "version": "1.5.2",
   "publisher": "Marvello",
